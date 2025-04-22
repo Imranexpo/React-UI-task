@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Centers & Privilege Corner</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure CSS file is linked -->
+</head>
+<body>
+
+    <div class="main-container"> <!-- Optional: Reuse main container -->
+
+        <!-- Shopping Centers & Privilege Section -->
+        <section class="shopping-privilege-section">
+
+            <!-- Left Column: Shopping Centers -->
+            <div class="column column-shopping">
+                <h2 class="column-title">Shopping Centers</h2>
+                <div class="shopping-items-list">
+                    <!-- Item 1 -->
+                    <article class="shopping-item">
+                        <div class="shopping-item-image">
+                            <img src="placeholder-raymond.jpg" alt="Raymond Store"> <!-- Replace -->
+                        </div>
+                        <div class="shopping-item-text">
+                            <div class="category-tags">
+                                <span class="category-tag primary">SELECT CITYWALK</span>
+                                <span class="category-tag secondary">LIFESTYLE</span>
+                            </div>
+                            <h4>Select Citywalk opens 4 new stores in June</h4>
+                            <p class="snippet">The new stores opened at Select Citywalk include Choko la, Raymond, Looks Salon and Home Stop</p>
+                            <p class="source-tag">#reel stories podcast</p>
+                        </div>
+                    </article>
+                    <!-- Item 2 -->
+                    <article class="shopping-item">
+                        <div class="shopping-item-image">
+                            <img src="placeholder-infiniti-mall.jpg" alt="Infiniti Mall Artwork"> <!-- Replace -->
+                        </div>
+                        <div class="shopping-item-text">
+                             <div class="category-tags">
+                                <span class="category-tag primary">INFINITI MALL</span>
+                                <span class="category-tag secondary">NEWS</span>
+                            </div>
+                            <h4>Infiniti Mall collaborates with T-Series & PVR Inox to unveil Adipurush artwork</h4>
+                            <p class="snippet">Constructed by Rubik's Cubes mosaic artist Selwyn Santmajor and Nikhil from Nikhil Artwork</p>
+                            <p class="source-tag">#reel stories podcast</p>
+                        </div>
+                    </article>
+                    <!-- Item 3 -->
+                    <article class="shopping-item">
+                        <div class="shopping-item-image">
+                            <img src="placeholder-galeries-lafayette.jpg" alt="Galeries Lafayette"> <!-- Replace -->
+                        </div>
+                        <div class="shopping-item-text">
+                             <div class="category-tags">
+                                <span class="category-tag primary">MULTIMEDIA</span>
+                                <span class="category-tag secondary">NEWS</span>
+                            </div>
+                            <h4>DLF creating new retail space in Delhi for France's Galeries Lafayette</h4>
+                            <p class="snippet">DLF is earmarking space for the luxury retailer between two of its top-end malls, Emporio and Promenade..</p>
+                            <p class="source-tag">#reel stories podcast</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Right Column: Privilege Members Corner -->
+            <div class="column column-privilege">
+                 <h2 class="column-title">Privilege Members Corner</h2>
+                 <div class="privilege-video-item">
+                    <div class="video-thumbnail-container">
+                        <img src="placeholder-privilege-video.jpg" alt="Privilege Member Video"> <!-- Replace -->
+                        <div class="video-duration-overlay">
+                            <span class="play-icon-small">▶</span> 5 min
+                        </div>
+                    </div>
+                    <h4 class="video-title">India D2C Summit & Awards 2023 Trailblazing Brands and Professionals</h4>
+                 </div>
+            </div>
+
+        </section> <!-- End shopping-privilege-section -->
+
+    </div> <!-- End main-container -->
+
+</body>
+</html>
+
+
+/* ============================================== */
+/* === Shopping Centers & Privilege Section === */
+/* ============================================== */
+
+.shopping-privilege-section {
+    display: flex;
+    gap: 30px; /* Adjust gap between the two main columns */
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align tops of columns */
+}
+
+.column {
+    /* Base styles for columns */
+}
+
+.column-shopping {
+    flex: 2 1 60%; /* Let the left column take more space */
+    min-width: 300px;
+}
+
+.column-privilege {
+    flex: 1 1 35%; /* Right column takes less space */
+    min-width: 250px;
+}
+
+/* Shared Column Title Style (reuse if defined globally) */
+.column-title {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 20px; /* Space below title */
+    padding-bottom: 5px;
+    display: inline-block;
+    position: relative;
+}
+.column-title::after { /* Short red underline */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e50914;
+    width: 40px; /* Adjust width */
+}
+
+
+/* --- Left Column: Shopping Centers --- */
+.shopping-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Vertical space between items */
+}
+
+.shopping-item {
+    display: flex;
+    align-items: flex-start; /* Image top aligned with text top */
+    gap: 20px; /* Space between image and text */
+}
+
+.shopping-item-image {
+    flex-shrink: 0;
+    width: 180px; /* Adjust image width */
+    height: 120px; /* Adjust image height */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333; /* Placeholder */
+}
+.shopping-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.shopping-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between text elements */
+    color: #ccc;
+}
+
+/* Re-use category tags if defined globally */
+.shopping-item-text .category-tags {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.shopping-item-text .category-tag.primary { color: #e50914; }
+.shopping-item-text .category-tag.secondary { color: #fff; }
+
+
+.shopping-item-text h4 { /* Headline */
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #eee;
+    line-height: 1.4;
+    margin: 0;
+    /* Optional: Limit lines */
+   /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.shopping-item-text .snippet {
+    font-size: 0.9em;
+    color: #aaa;
+    line-height: 1.5;
+     /* Optional: Limit lines */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.shopping-item-text .source-tag { /* Hashtag/Source line */
+    font-size: 0.8em;
+    color: #888;
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+
+/* --- Right Column: Privilege Members Corner --- */
+.privilege-video-item {
+    /* Styling for the single item container */
+}
+
+/* Reuse video thumbnail styles if defined globally */
+.privilege-video-item .video-thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space below thumbnail */
+    background-color: #333; /* Placeholder */
+    aspect-ratio: 16 / 9; /* Maintain video aspect ratio */
+}
+.privilege-video-item .video-thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Video Duration Overlay */
+.video-duration-overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 8px; /* Positioned left in this image */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.play-icon-small { /* Simple text play icon */
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+/* Reuse video title style if defined globally */
+.privilege-video-item .video-title {
+    color: #ccc;
+    font-size: 0.95em;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* ============================ */
+/* === Responsiveness       === */
+/* ============================ */
+
+@media (max-width: 992px) {
+    .shopping-privilege-section {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shopping-privilege-section {
+        flex-direction: column; /* Stack columns */
+        gap: 30px; /* Vertical gap when stacked */
+    }
+    .column-shopping, .column-privilege {
+        flex-basis: 100%; /* Make columns full width */
+        min-width: unset;
+    }
+    .shopping-item {
+        gap: 15px;
+    }
+    .shopping-item-image {
+        width: 120px; /* Smaller image on mobile */
+        height: 80px;
+    }
+    .shopping-item-text h4 {
+        font-size: 1em;
+    }
+     .shopping-item-text .snippet {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .shopping-item {
+        flex-direction: column; /* Stack image above text */
+        align-items: flex-start; /* Align text left */
+    }
+     .shopping-item-image {
+        width: 100%; /* Full width image */
+        height: 150px; /* Adjust height */
+    }
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Section</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure CSS file is linked -->
+</head>
+<body>
+
+    <!-- You can place this inside .main-container or wherever appropriate -->
+    <div class="podcast-section-container">
+        <div class="podcast-header">
+            <h3 class="podcast-title">Podcast</h3>
+            <a href="#" class="podcast-see-more">See more <span class="arrow">></span></a>
+        </div>
+        <div class="podcast-list">
+            <!-- Podcast Item 1 -->
+            <div class="podcast-item">
+                <div class="podcast-item-image">
+                    <img src="placeholder-podcast1.jpg" alt="Insight Story Podcast"> <!-- Replace -->
+                </div>
+                <div class="podcast-item-text">
+                    <h4>Simplifying Retai Industry Compliance Management</h4>
+                    <p>TV & Film:Film Interviews</p>
+                </div>
+            </div>
+            <!-- Podcast Item 2 -->
+             <div class="podcast-item">
+                <div class="podcast-item-image">
+                    <img src="placeholder-podcast2.jpg" alt="ModernRetail Podcast"> <!-- Replace -->
+                </div>
+                <div class="podcast-item-text">
+                    <h4>Simplifying Retai Industry Compliance Management</h4>
+                    <p>TV & Film:Film Interviews</p>
+                </div>
+            </div>
+            <!-- Add more .podcast-item divs as needed -->
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+/* ====================== */
+/* === Podcast Section === */
+/* ====================== */
+
+.podcast-section-container {
+    background-color: #ffffff; /* White background */
+    border-radius: 12px;       /* Rounded corners for the whole container */
+    padding: 20px;             /* Internal padding */
+    max-width: 400px;          /* Example max-width, adjust as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+    /* Add margin if needed to space it from other elements */
+    /* margin: 20px; */
+}
+
+.podcast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Space below header */
+}
+
+.podcast-title {
+    font-size: 1.4em;  /* Adjust size as needed */
+    font-weight: 600; /* Bold */
+    color: #111;      /* Dark text */
+    margin: 0;
+    padding-bottom: 6px; /* Space for underline */
+    position: relative;
+    display: inline-block;
+}
+.podcast-title::after { /* Short red underline */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e50914; /* Red */
+    width: 30px; /* Adjust width of underline */
+    border-radius: 1px; /* Optional slightly rounded ends */
+}
+
+.podcast-see-more {
+    font-size: 0.9em;
+    color: #888; /* Light grey */
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+.podcast-see-more:hover {
+    color: #111; /* Darker on hover */
+}
+.podcast-see-more .arrow {
+    margin-left: 2px;
+}
+
+
+.podcast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Vertical space between podcast items */
+}
+
+.podcast-item {
+    display: flex;
+    align-items: center; /* Vertically center image and text block */
+    gap: 12px; /* Space between image and text */
+}
+
+.podcast-item-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 65px;  /* Adjust size */
+    height: 65px; /* Adjust size (make square) */
+    border-radius: 8px; /* Rounded corners for image */
+    overflow: hidden;
+    background-color: #eee; /* Placeholder background */
+}
+.podcast-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the area */
+    display: block;
+}
+
+.podcast-item-text {
+    flex-grow: 1; /* Allow text block to take remaining space */
+    color: #333; /* Default text color */
+}
+
+.podcast-item-text h4 { /* Headline */
+    font-size: 0.95em; /* Adjust size */
+    font-weight: 500; /* Medium weight */
+    color: #111; /* Dark text */
+    line-height: 1.4;
+    margin: 0 0 4px 0; /* Space below headline */
+}
+
+.podcast-item-text p { /* Subtitle */
+    font-size: 0.85em; /* Adjust size */
+    color: #777; /* Grey text */
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Optional: Add subtle separator line */
+/* .podcast-item:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 18px;
+} */
+
+/* === Optional: Responsiveness === */
+@media (max-width: 480px) {
+    .podcast-section-container {
+        padding: 15px;
+    }
+    .podcast-title {
+        font-size: 1.2em;
+    }
+     .podcast-see-more {
+        font-size: 0.8em;
+    }
+    .podcast-item-image {
+        width: 55px;
+        height: 55px;
+    }
+    .podcast-item-text h4 {
+        font-size: 0.9em;
+    }
+     .podcast-item-text p {
+        font-size: 0.8em;
+    }
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Group Events</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure CSS file is linked -->
+</head>
+<body>
+
+    <div class="main-container"> <!-- Optional: Reuse main container -->
+
+        <!-- Images Group Events Section -->
+        <section class="events-section">
+            <div class="events-header">
+                <h2 class="events-section-title">Images Group Events</h2>
+                <a href="#" class="events-see-more">See more <span class="arrow">></span></a>
+            </div>
+
+            <div class="events-grid-layout">
+
+                <!-- Column 1: Featured Event -->
+                <div class="event-column-featured">
+                    <article class="featured-event-card">
+                        <div class="featured-event-image">
+                            <img src="placeholder-d2c-summit-large.jpg" alt="D2C Summit & Awards"> <!-- Replace -->
+                        </div>
+                        <div class="featured-event-content">
+                            <span class="event-category featured-category">TECHNOLOGY</span>
+                            <h3>D2C India</h3>
+                            <div class="event-meta featured-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                            <p class="event-snippet">Get inspired building brands for the next decade of consumption</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Column 2: List of Events -->
+                <div class="event-column-list">
+                    <!-- Small Event 1 -->
+                    <article class="small-event-card">
+                        <div class="small-event-image">
+                             <img src="placeholder-archies-event.jpg" alt="Archies Event"> <!-- Replace -->
+                        </div>
+                        <div class="small-event-text">
+                            <h4>Unwrapping the Archies reinvention plan</h4>
+                            <p class="snippet">The Middle East Retail Forum (MRF) is a powerful</p>
+                            <div class="event-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                            <a href="#" class="registration-link">Registration Now <span class="arrow">></span></a>
+                        </div>
+                    </article>
+                     <!-- Small Event 2 -->
+                     <article class="small-event-card">
+                        <div class="small-event-image">
+                              <img src="placeholder-phygital-event.jpg" alt="Phygital Convention"> <!-- Replace -->
+                        </div>
+                        <div class="small-event-text">
+                             <h4>Phygital Retail Convention</h4>
+                             <p class="snippet">India's Largest Retail Intelligence Event</p>
+                            <div class="event-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                             <a href="#" class="registration-link">Registration Now <span class="arrow">></span></a>
+                        </div>
+                    </article>
+                    <!-- Small Event 3 -->
+                    <article class="small-event-card">
+                        <div class="small-event-image">
+                             <img src="placeholder-iff-event.jpg" alt="India Fashion Forum"> <!-- Replace -->
+                        </div>
+                        <div class="small-event-text">
+                             <h4>India Fashion Forum</h4>
+                             <p class="snippet">Launched in 2000, India Fashion Forum (IFF) is India's largest</p>
+                             <div class="event-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                              <a href="#" class="registration-link">Registration Now <span class="arrow">></span></a>
+                        </div>
+                    </article>
+                </div>
+
+                 <!-- Column 3: List of Events -->
+                 <div class="event-column-list">
+                      <!-- Small Event 4 -->
+                    <article class="small-event-card">
+                        <div class="small-event-image">
+                              <img src="placeholder-food-forum1.jpg" alt="India Food Forum 1"> <!-- Replace -->
+                        </div>
+                        <div class="small-event-text">
+                              <h4>India Food Forum</h4>
+                              <p class="snippet">The aisles are open at India's most powerfulfood b2b</p>
+                             <div class="event-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                              <a href="#" class="registration-link">Registration Now <span class="arrow">></span></a>
+                        </div>
+                    </article>
+                     <!-- Small Event 5 -->
+                    <article class="small-event-card">
+                        <div class="small-event-image">
+                             <img src="placeholder-food-forum2.jpg" alt="India Food Forum 2"> <!-- Replace -->
+                        </div>
+                        <div class="small-event-text">
+                              <h4>India Food Forum</h4>
+                              <p class="snippet">Mobile commerce has become a worldwide phenomenon</p>
+                             <div class="event-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                              <a href="#" class="registration-link">Registration Now <span class="arrow">></span></a>
+                        </div>
+                    </article>
+                    <!-- Small Event 6 -->
+                     <article class="small-event-card">
+                        <div class="small-event-image">
+                             <img src="placeholder-scnext-event.jpg" alt="Shopping Centres Next"> <!-- Replace -->
+                        </div>
+                        <div class="small-event-text">
+                              <h4>Shopping Centres Next</h4>
+                             <p class="snippet">Shopping Centres Next is India's most differentiated</p>
+                             <div class="event-meta">
+                                <span class="meta-item"><span class="icon calendar"></span> Wed, 09 Aug 2023</span>
+                                <span class="meta-item"><span class="icon location"></span> Barkha Dutt</span>
+                            </div>
+                              <a href="#" class="registration-link">Registration Now <span class="arrow">></span></a>
+                        </div>
+                    </article>
+                 </div>
+
+            </div> <!-- End events-grid-layout -->
+        </section> <!-- End events-section -->
+
+    </div> <!-- End main-container -->
+
+</body>
+</html>
+
+
+/* =========================== */
+/* === Images Group Events === */
+/* =========================== */
+
+.events-section {
+    /* Adjust margin/padding if needed */
+}
+
+.events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* Space below header */
+}
+
+.events-section-title {
+    color: #fff;
+    font-size: 1.4em;
+    padding-bottom: 6px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+.events-section-title::after { /* Short red underline */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e50914;
+    width: 40px; /* Adjust width */
+}
+
+.events-see-more {
+    color: #aaa;
+    font-size: 0.9em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.events-see-more:hover { color: #fff; }
+.events-see-more .arrow { margin-left: 3px; }
+
+
+/* Grid Layout for Columns */
+.events-grid-layout {
+    display: grid;
+    /* Define 3 columns: Featured takes more space */
+    grid-template-columns: 1.5fr 1fr 1fr; /* Adjust fractions as needed (e.g., 2fr 1fr 1fr) */
+    gap: 25px; /* Gap between columns */
+}
+
+.event-column-featured {
+    /* Styles specific to the featured column if needed */
+}
+.event-column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between small event cards */
+}
+
+/* --- Featured Event Card --- */
+.featured-event-card {
+    background-color: #f7f7f7; /* Very light grey background */
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make card fill column height potentially */
+}
+
+.featured-event-image {
+    width: 100%;
+    /* height: 250px; */ /* Set a fixed height or use aspect-ratio */
+    aspect-ratio: 16 / 9; /* Adjust as needed */
+    background-color: #e0e0e0; /* Placeholder */
+}
+.featured-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Use contain if logo shouldn't be cropped */
+    display: block;
+}
+
+.featured-event-content {
+    padding: 20px;
+    color: #333;
+    flex-grow: 1; /* Allow content to take remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event-category {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #e50914; /* Red category */
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.featured-event-content h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.event-meta {
+    display: flex;
+    gap: 12px; /* Space between date and location/author */
+    font-size: 0.8em;
+    color: #777; /* Grey meta text */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Space between icon and text */
+}
+.icon { /* Placeholder for icons */
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #aaa; /* Placeholder color */
+    /* Use SVG background images or font icons here */
+}
+.icon.calendar { /* Example */ background-color: #bbb;}
+.icon.location { /* Example */ background-color: #ccc;}
+
+.event-snippet {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 4px; /* Space above snippet */
+     /* Optional: Limit lines */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+
+/* --- Small Event Card --- */
+.small-event-card {
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 15px; /* Space between image and text */
+    align-items: flex-start; /* Align image top to text top */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+}
+
+.small-event-image {
+    flex-shrink: 0;
+    width: 80px; /* Adjust size */
+    height: 80px; /* Adjust size (square) */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Placeholder */
+}
+.small-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Use contain if logo shouldn't crop */
+    display: block;
+}
+
+.small-event-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #333;
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.small-event-text h4 {
+    font-size: 1em;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.small-event-text .snippet {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+     /* Optional: Limit lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.small-event-text .event-meta {
+    margin-top: 4px; /* Space above meta */
+    font-size: 0.75em; /* Smaller meta text */
+}
+
+.registration-link {
+    color: #e50914; /* Red link */
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 6px; /* Space above link */
+    display: inline-block; /* Allow margin-top */
+    transition: color 0.2s ease;
+}
+.registration-link:hover {
+    filter: brightness(1.1); /* Slight brighten on hover */
+}
+.registration-link .arrow { margin-left: 2px; }
+
+/* ============================ */
+/* === Responsiveness       === */
+/* ============================ */
+
+@media (max-width: 1024px) {
+    .events-grid-layout {
+        /* Change to 2 columns: Featured + 1 List Column */
+        grid-template-columns: 1.5fr 1fr;
+        gap: 20px;
+    }
+    .event-column-list:last-of-type {
+        /* This column might wrap below on smaller tablets */
+        grid-column: 1 / -1; /* Make it span full width when it wraps */
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+     .events-grid-layout {
+        /* Stack all columns */
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+     .event-column-list:last-of-type {
+        /* Reset grid-column span */
+        grid-column: auto;
+        margin-top: 0; /* Gap handles spacing */
+    }
+    .featured-event-image {
+        aspect-ratio: 21 / 9; /* Wider aspect ratio maybe */
+    }
+}
+
+@media (max-width: 480px) {
+    .small-event-card {
+        flex-direction: column; /* Stack image above text */
+        align-items: stretch; /* Allow text to span width */
+    }
+    .small-event-image {
+        width: 100%; /* Full width */
+        height: 120px; /* Adjust height */
+        margin-bottom: 10px; /* Space below image */
+    }
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Section</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure CSS file is linked -->
+</head>
+<body>
+
+    <div class="main-container"> <!-- Optional: Reuse main container -->
+
+        <!-- Book Store Section -->
+        <section class="book-store-section">
+            <h2 class="section-title">Book Store</h2> <!-- Reuse section-title class -->
+            <div class="horizontal-scroll-container"> <!-- Reuse scroll container class -->
+                <div class="card-row-flex"> <!-- Reuse flex row class -->
+                    <!-- Book Card 1 -->
+                    <article class="book-card">
+                        <a href="#" class="book-card-link"> <!-- Make the whole card clickable -->
+                            <div class="book-card-image">
+                                <img src="placeholder-book-grocer1.jpg" alt="Progressive Grocer - June 2023"> <!-- Replace -->
+                            </div>
+                            <div class="book-card-content">
+                                <h4>Progressive Grocer – June 2023</h4>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Book Card 2 -->
+                    <article class="book-card">
+                         <a href="#" class="book-card-link">
+                            <div class="book-card-image">
+                                <img src="placeholder-book-bof.jpg" alt="Images Business Of Fashion – June 2023"> <!-- Replace -->
+                            </div>
+                            <div class="book-card-content">
+                                <h4>Images Business Of Fashion – June 2023</h4>
+                            </div>
+                         </a>
+                    </article>
+                     <!-- Book Card 3 -->
+                    <article class="book-card">
+                        <a href="#" class="book-card-link">
+                            <div class="book-card-image">
+                                <img src="placeholder-book-scnews.jpg" alt="Shopping Centre News – May 2023"> <!-- Replace -->
+                            </div>
+                            <div class="book-card-content">
+                                <h4>Shopping Centre News – May 2023</h4>
+                            </div>
+                         </a>
+                    </article>
+                     <!-- Book Card 4 -->
+                     <article class="book-card">
+                        <a href="#" class="book-card-link">
+                            <div class="book-card-image">
+                                <img src="placeholder-book-phygital.jpg" alt="Phygital May-June 2023"> <!-- Replace -->
+                            </div>
+                            <div class="book-card-content">
+                                <h4>Phygital May-June 2023</h4>
+                            </div>
+                        </a>
+                    </article>
+                     <!-- Book Card 5 -->
+                     <article class="book-card">
+                         <a href="#" class="book-card-link">
+                            <div class="book-card-image">
+                                <img src="placeholder-book-grocer2.jpg" alt="Progressive Grocer - June 2023 Repeat"> <!-- Replace -->
+                            </div>
+                            <div class="book-card-content">
+                                <h4>Progressive Grocer – June 2023</h4>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- End main-container -->
+
+</body>
+</html>
+
+/* ======================= */
+/* === Book Store Section === */
+/* ======================= */
+
+.book-store-section {
+    /* Margin/padding handled by main-container or add specific values */
+}
+
+/* --- Reusable Styles (Ensure these exist or add them) --- */
+
+/* Section Title (Example, adjust if already defined) */
+.section-title {
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    display: inline-block;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e50914; /* Red */
+    width: 50px; /* Short underline width */
+}
+
+/* Horizontal Scroll Container (Example, adjust if already defined) */
+.horizontal-scroll-container {
+    overflow-x: auto;
+    padding-bottom: 15px; /* Space for scrollbar */
+    /* Optional Scrollbar Styling */
+    scrollbar-width: thin;
+    scrollbar-color: #555 #222;
+}
+.horizontal-scroll-container::-webkit-scrollbar { height: 8px; }
+.horizontal-scroll-container::-webkit-scrollbar-track { background: #222; border-radius: 4px; }
+.horizontal-scroll-container::-webkit-scrollbar-thumb { background-color: #555; border-radius: 4px; }
+
+/* Flex Row for Cards (Example, adjust if already defined) */
+.card-row-flex {
+    display: flex;
+    gap: 15px; /* Space between cards */
+    width: max-content;
+}
+/* --- End Reusable Styles --- */
+
+
+/* --- Book Card Specific Styling --- */
+.book-card {
+    background-color: #fff; /* White background */
+    border-radius: 10px;   /* Rounded corners */
+    width: 200px;          /* Adjust width as needed */
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+    transition: transform 0.2s ease-in-out; /* Optional hover effect */
+}
+
+.book-card:hover {
+    /* transform: translateY(-3px); */ /* Optional lift effect */
+}
+
+.book-card-link { /* Style the link wrapper */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make link fill the card */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+}
+
+
+.book-card-image {
+    width: 100%;
+    /* height: 250px; */ /* Set height or use aspect-ratio */
+    aspect-ratio: 2 / 3; /* Common book/magazine aspect ratio */
+    background-color: #eee; /* Placeholder background */
+    overflow: hidden; /* Ensure image stays within bounds */
+}
+.book-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area */
+    /* Use 'contain' if you need to see the whole cover without cropping */
+    /* object-fit: contain; */
+    display: block;
+}
+
+.book-card-content {
+    padding: 12px;
+    text-align: left; /* Align text left */
+    flex-grow: 1; /* Allow content to take space */
+}
+
+.book-card-content h4 {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #222; /* Dark text for title */
+    line-height: 1.4;
+    margin: 0;
+    /* Optional: Limit lines */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+
+/* ============================ */
+/* === Responsiveness       === */
+/* ============================ */
+
+@media (max-width: 768px) {
+    .book-card {
+        width: 180px; /* Slightly smaller cards */
+    }
+     .book-card-content h4 {
+         font-size: 0.85em;
+     }
+}
+
+@media (max-width: 480px) {
+    .book-card {
+        width: 150px;
+    }
+     .book-card-image {
+        aspect-ratio: 2 / 2.8; /* Adjust aspect ratio if needed */
+    }
+     .book-card-content h4 {
+         font-size: 0.8em;
+     }
+      .book-card-content {
+        padding: 10px;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnect Section</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure CSS file is linked -->
+</head>
+<body>
+
+    <div class="main-container"> <!-- Optional: Reuse main container -->
+
+        <!-- Reconnect Section -->
+        <section class="reconnect-section">
+            <h2 class="section-title">Reconnect</h2> <!-- Reuse section-title class -->
+
+            <div class="reconnect-content-area">
+
+                <!-- Horizontally Scrollable Card Area -->
+                <div class="horizontal-scroll-container reconnect-cards-scroll"> <!-- Reuse scroll container class -->
+                    <div class="card-row-flex"> <!-- Reuse flex row class -->
+                        <!-- Card 1 -->
+                        <article class="reconnect-card">
+                            <div class="reconnect-card-image">
+                                <img src="placeholder-reconnect-polo.jpg" alt="Arvind Fashions US Polo"> <!-- Replace -->
+                            </div>
+                            <div class="reconnect-card-content">
+                                <h4>Arvind Fashions' data-driven digital transformation</h4>
+                                <p class="snippet">In 2018, Uniqlo sent Tomohiko Sei to India to spearhead its entry..</p>
+                                <p class="hashtag">#lifestyle</p>
+                            </div>
+                        </article>
+                        <!-- Card 2 -->
+                         <article class="reconnect-card">
+                            <div class="reconnect-card-image">
+                                <img src="placeholder-reconnect-lee.jpg" alt="US Denim Lee"> <!-- Replace -->
+                            </div>
+                            <div class="reconnect-card-content">
+                                <h4>US denim brand Lee opens outlets in Sikar, Patna..</h4>
+                                <p class="snippet">So far Ace Turtle has opened 80 Lee and Wrangler franchisee-stores</p>
+                                <p class="hashtag">#lifestyle</p>
+                            </div>
+                        </article>
+                        <!-- Card 3 -->
+                        <article class="reconnect-card">
+                            <div class="reconnect-card-image">
+                                <img src="placeholder-reconnect-burgers2.jpg" alt="Arvind Fashions Burgers"> <!-- Replace -->
+                            </div>
+                            <div class="reconnect-card-content">
+                                 <h4>Arvind Fashions' data-driven digital transformation</h4>
+                                <p class="snippet">In 2018, Uniqlo sent Tomohiko Sei to India to spearhead its entry..</p>
+                                <p class="hashtag">#lifestyle</p>
+                            </div>
+                        </article>
+                        <!-- Card 4 -->
+                        <article class="reconnect-card">
+                            <div class="reconnect-card-image">
+                                <img src="placeholder-reconnect-lee2.jpg" alt="US Denim Lee Repeat"> <!-- Replace -->
+                            </div>
+                            <div class="reconnect-card-content">
+                                <h4>US denim brand Lee opens outlets in Sikar, Patna..</h4>
+                                <p class="snippet">So far Ace Turtle has opened 80 Lee and Wrangler franchisee-stores</p>
+                                <p class="hashtag">#lifestyle</p>
+                            </div>
+                        </article>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+
+                <!-- Advertisement Column -->
+                <aside class="reconnect-ad">
+                    <p class="ad-label">- Advertisement -</p>
+                    <div class="ad-image-container">
+                        <img src="placeholder-reconnect-ad-bike.jpg" alt="Advertisement"> <!-- Replace -->
+                    </div>
+                </aside>
+
+            </div> <!-- End reconnect-content-area -->
+        </section> <!-- End reconnect-section -->
+
+    </div> <!-- End main-container -->
+
+</body>
+</html>
+
+
+/* ======================== */
+/* === Reconnect Section === */
+/* ======================== */
+
+.reconnect-section {
+     /* Adjust margin/padding if needed */
+}
+
+/* Reusable Section Title (Example) */
+.section-title {
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    display: inline-block;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e50914; /* Red */
+    width: 50px; /* Short underline width */
+}
+
+/* Container for scrollable cards + ad */
+.reconnect-content-area {
+    display: flex;
+    gap: 20px; /* Gap between card area and ad */
+    align-items: flex-start; /* Align tops */
+}
+
+/* Scrollable container for cards */
+.reconnect-cards-scroll {
+    flex-grow: 1; /* Allow card area to take available space */
+    overflow-x: auto;
+    padding-bottom: 15px; /* Space for scrollbar */
+    /* Optional Scrollbar Styling */
+    scrollbar-width: thin;
+    scrollbar-color: #555 #222;
+}
+.reconnect-cards-scroll::-webkit-scrollbar { height: 8px; }
+.reconnect-cards-scroll::-webkit-scrollbar-track { background: #222; border-radius: 4px; }
+.reconnect-cards-scroll::-webkit-scrollbar-thumb { background-color: #555; border-radius: 4px; }
+
+/* Reusable Flex Row for Cards */
+.card-row-flex {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+}
+
+/* Individual Reconnect Card */
+.reconnect-card {
+    background-color: #f7f7f7; /* Very light grey background */
+    border-radius: 10px;
+    width: 260px;          /* Adjust width */
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Optional shadow */
+}
+
+.reconnect-card-image {
+    width: 100%;
+    height: 160px; /* Adjust height */
+    background-color: #e0e0e0; /* Placeholder */
+    overflow: hidden;
+}
+.reconnect-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reconnect-card-content {
+    padding: 15px;
+    color: #333;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.reconnect-card-content h4 {
+    font-size: 1em;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.4;
+    margin: 0;
+    /* Optional: Limit lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reconnect-card-content .snippet {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1; /* Push hashtag down */
+    /* Optional: Limit lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reconnect-card-content .hashtag {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+
+/* --- Advertisement Column --- */
+.reconnect-ad {
+    flex-shrink: 0; /* Prevent ad from shrinking */
+    width: 300px; /* Adjust width as needed */
+    /* Add min-width if needed */
+}
+
+.reconnect-ad .ad-label {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.reconnect-ad .ad-image-container {
+    width: 100%;
+    background-color: #ccc; /* Placeholder */
+    border-radius: 10px; /* Match card radius */
+    overflow: hidden;
+}
+.reconnect-ad .ad-image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* ============================ */
+/* === Responsiveness       === */
+/* ============================ */
+
+@media (max-width: 992px) {
+    .reconnect-ad {
+        width: 250px; /* Reduce ad width */
+    }
+    .reconnect-card {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reconnect-content-area {
+        flex-direction: column; /* Stack cards above ad */
+    }
+    .reconnect-ad {
+        width: 100%; /* Make ad full width when stacked */
+        margin-top: 20px; /* Add space above ad */
+    }
+    .reconnect-card {
+        width: 220px; /* Adjust card width */
+    }
+     .reconnect-card-image {
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reconnect-card {
+        width: 200px;
+    }
+     .reconnect-card-image {
+        height: 120px;
+    }
+     .reconnect-card-content h4 {
+         font-size: 0.9em;
+     }
+      .reconnect-card-content .snippet {
+         font-size: 0.85em;
+     }
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Section</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure CSS file is linked -->
+    <!-- Add Font Awesome or another icon library if you want real icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+</head>
+<body>
+
+    <!-- ... Previous content sections ... -->
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+
+                <!-- Footer Column 1: About & Contact -->
+                <div class="footer-column footer-about">
+                    <img src="placeholder-footer-logo.png" alt="IndiaRetailing.com Logo" class="footer-logo"> <!-- Replace -->
+
+                    <div class="address-block">
+                        <p><strong>New Delhi</strong></p>
+                        <address>
+                            Images Multimedia Ltd.<br>
+                            S-61 A, Pocket S, Okhla Phase II, Okhla Industrial Estate, New Delhi, Delhi 110020<br>
+                            Images Multimedia Ltd.
+                        </address>
+                    </div>
+
+                    <div class="address-block">
+                        <p><strong>Mumbai</strong></p>
+                         <address>
+                            E 519, Floral Deck Plaza<br>
+                            Central MIDC Road, Opp. SEEPZ.<br>
+                            Andheri (East)<br>
+                            Mumbai 400093
+                        </address>
+                    </div>
+
+                     <div class="contact-block">
+                        <p><strong>content us</strong></p>
+                        <p><span class="icon phone"></span> <a href="tel:+919867355551">+91-9867355551</a></p>
+                        <p><span class="icon email"></span> <a href="mailto:editor@indiaretailing.com">editor@indiaretailing.com</a></p>
+                     </div>
+
+                     <div class="social-media-block">
+                        <p><strong>Our Social Media</strong></p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook" class="social-icon facebook">F</a> <!-- Replace with actual icon -->
+                            <a href="#" aria-label="LinkedIn" class="social-icon linkedin">in</a> <!-- Replace with actual icon -->
+                            <a href="#" aria-label="YouTube" class="social-icon youtube">Y</a> <!-- Replace with actual icon -->
+                            <a href="#" aria-label="Instagram" class="social-icon instagram">I</a> <!-- Replace with actual icon -->
+                            <a href="#" aria-label="Other" class="social-icon other">O</a> <!-- Replace with actual icon -->
+                        </div>
+                     </div>
+
+                     <div class="app-download-block">
+                         <p><strong>Download Indiaretailing App</strong></p>
+                         <div class="app-buttons">
+                             <a href="#"><img src="placeholder-google-play.png" alt="Get it on Google Play"></a> <!-- Replace -->
+                             <a href="#"><img src="placeholder-app-store.png" alt="Download on the App Store"></a> <!-- Replace -->
+                         </div>
+                     </div>
+                </div>
+
+                <!-- Footer Columns 2-7: Links -->
+                <div class="footer-links-grid">
+                    <div class="footer-column footer-links">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="#">About IndiaRetailing.com</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Advertise with us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+
+                        <h4>Bookstore</h4>
+                         <ul>
+                            <li><a href="#">Magazines</a></li>
+                            <li><a href="#">Yearbooks</a></li>
+                            <li><a href="#">Other publications</a></li>
+                        </ul>
+                    </div>
+
+                     <div class="footer-column footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Fashion & Lifestyle</a></li>
+                            <li><a href="#">Beauty & Wellness</a></li>
+                            <li><a href="#">Food & Beverage</a></li>
+                            <li><a href="#">Consumer Durables & IT</a></li>
+                             <li><a href="#">Entertainment</a></li>
+                            <li><a href="#">Home Décor & Furnishing</a></li>
+                            <li><a href="#">Specialty Retail</a></li>
+                        </ul>
+                         <h4>Videos</h4>
+                          <ul>
+                            <li><a href="#">Retail with Rasul Bailay</a></li>
+                            <li><a href="#">The Store</a></li>
+                            <li><a href="#">IR Studio</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column footer-links">
+                        <h4>Features</h4>
+                        <ul>
+                            <li><a href="#">Leaders Ink</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Finance & Funding</a></li>
+                            <li><a href="#">D2C</a></li>
+                             <li><a href="#">Shopping Centers</a></li>
+                            <li><a href="#">Results</a></li>
+                             <li><a href="#">Research</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                        </ul>
+                         <h4>IR Prime Subscription Box</h4>
+                          <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                             <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column footer-links">
+                        <h4>Events</h4>
+                        <ul>
+                            <li><a href="#">India Food Forum</a></li>
+                            <li><a href="#">Shopping Centre Next</a></li>
+                            <li><a href="#">Phygital Retail Convention</a></li>
+                            <li><a href="#">India D2C Summit & Awards</a></li>
+                            <li><a href="#">Internet Commerce Summit</a></li>
+                        </ul>
+                         <h4>Retail Functions</h4>
+                         <ul>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Operations</a></li>
+                            <li><a href="#">HR</a></li>
+                             <li><a href="#">Supply Chain</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- End footer-content -->
+
+            <div class="footer-copyright">
+                 <hr>
+                <p>Copyright © 2023 Indiaretailing.com. All Rights Reserved.</p>
+            </div>
+        </div> <!-- End footer-container -->
+    </footer> <!-- End site-footer -->
+
+</body>
+</html>
+
+
+/* ================== */
+/* === Site Footer === */
+/* ================== */
+
+.site-footer {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 50px 0 20px 0; /* Vertical padding, less at bottom */
+    color: #555; /* Default text color */
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px; /* Or your site's max width */
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Gap between main columns */
+    margin-bottom: 30px; /* Space above copyright */
+}
+
+/* --- Column 1: About --- */
+.footer-column.footer-about {
+    flex: 1 1 300px; /* Allow shrinking, base width 300px */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between elements in this column */
+}
+
+.footer-logo {
+    max-width: 180px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+.address-block p strong,
+.contact-block p strong,
+.social-media-block p strong,
+.app-download-block p strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Darker heading */
+    font-weight: 600;
+}
+
+.address-block address {
+    font-style: normal; /* Reset italic address style */
+    line-height: 1.5;
+}
+
+.contact-block p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contact-block a {
+    color: #555;
+    text-decoration: none;
+}
+.contact-block a:hover {
+    color: #111;
+}
+.contact-block .icon { /* Placeholder for icons */
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ccc; /* Placeholder */
+    /* Use real icons */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0; /* Placeholder background */
+    color: #555; /* Placeholder text color */
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.social-icon:hover {
+    background-color: #ccc;
+    color: #111;
+}
+/* Add specific colors if using actual icons */
+/* .social-icon.facebook { background-color: #3b5998; color: #fff; } */
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.app-buttons img {
+    height: 35px; /* Adjust button height */
+    width: auto;
+}
+
+
+/* --- Columns 2-7: Links Grid --- */
+.footer-links-grid {
+    flex: 2 1 60%; /* Take more space */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Responsive columns */
+    gap: 25px; /* Gap between link columns */
+}
+
+.footer-column.footer-links {
+    /* Styles for each link column */
+}
+
+.footer-links h4 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between links */
+}
+
+.footer-links li {
+    /* No specific styles needed */
+}
+
+.footer-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.footer-links a:hover {
+    color: #111;
+    text-decoration: underline; /* Optional hover underline */
+}
+
+
+/* --- Copyright --- */
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    color: #888;
+    font-size: 0.85em;
+}
+.footer-copyright hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0; /* Light grey line */
+    margin-bottom: 20px;
+}
+
+
+/* ====================== */
+/* === Responsiveness === */
+/* ====================== */
+
+@media (max-width: 992px) {
+    .footer-content {
+        gap: 25px;
+    }
+    .footer-column.footer-about {
+         flex-basis: 40%; /* Give about slightly less */
+    }
+    .footer-links-grid {
+         flex-basis: 55%; /* Give links slightly more */
+         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Adjust min width */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack main columns */
+        gap: 30px;
+    }
+    .footer-column.footer-about,
+    .footer-links-grid {
+        flex-basis: 100%; /* Full width when stacked */
+    }
+     .footer-links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ensure decent width */
+        gap: 20px 15px; /* Reduce gap */
+    }
+     .footer-links h4 {
+         margin-bottom: 10px;
+     }
+      .footer-links ul {
+          gap: 6px;
+      }
+}
+
+@media (max-width: 480px) {
+      .site-footer {
+        padding: 30px 0 15px 0;
+        font-size: 0.85em;
+    }
+    .footer-container {
+        padding: 0 15px;
+    }
+     .footer-links-grid {
+         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Further adjust */
+     }
+     .footer-copyright {
+         font-size: 0.8em;
+     }
+}
